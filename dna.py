@@ -28,7 +28,3 @@ def test_complement_upper():
     assert complement_sequence("atc") == 'GAT'
 
 
-if __name__ == '__main__':
-    import doctest
-    doctest.testmod()
-
