@@ -22,16 +22,11 @@ def complement_sequence(seq):
     >>> complement_sequence('ATGCAGT')
     'ACTGCAT'
     """
+    complement_nucleotides = {'G': 'C', 'C': 'G', 'A': 'T', 'T': 'A'}
     complements = []
+
     for nt in seq:
-        if nt == 'G':
-            comp = 'C'
-        elif nt == 'C':
-            comp = 'G'
-        elif nt == 'A':
-            comp = 'T'
-        elif nt == 'T':
-            comp = 'A'
+        comp = complement_nucleotides[nt]
         complements.append(comp)
     complements = complements[::-1]
     return ''.join(complements)
