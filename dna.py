@@ -23,8 +23,7 @@ def complement_sequence(seq):
     'ACTGCAT'
     """
     complement_nucleotides = {'G': 'C', 'C': 'G', 'A': 'T', 'T': 'A'}
-    complements = [complement_nucleotides[nt] for nt in seq[::-1]]
-    return ''.join(complements)
+    return ''.join(complement_nucleotides[nt] for nt in seq[::-1])
 
 
 
