@@ -1,5 +1,5 @@
 
-seq = "ACTGCA"
+
 complement_nucleotides = {'G': 'C', 'C': 'G', 'A': 'T', 'T': 'A'}
 
 def complement_sequence(seq):
@@ -21,8 +21,12 @@ def complement_sequence(seq):
 
     >>> complement_sequence('ATGCAGT')
     'ACTGCAT'
+
+    >>> complement_sequence('atc')
+    'GAT'
+
     """
-    return ''.join(complement_nucleotides[nt] for nt in seq[::-1])
+    return ''.join(complement_nucleotides[nt] for nt in seq[::-1].upper())
 
 
 
@@ -30,3 +34,4 @@ def complement_sequence(seq):
 if __name__ == '__main__':
     import doctest
     doctest.testmod()
+
