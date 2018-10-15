@@ -1,3 +1,7 @@
 venv
 .idea
 *.egg-info
+.eggs
+build
+dist
+docs
