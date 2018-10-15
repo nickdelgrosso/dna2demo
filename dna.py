@@ -1,6 +1,6 @@
 
 seq = "ACTGCA"
-
+complement_nucleotides = {'G': 'C', 'C': 'G', 'A': 'T', 'T': 'A'}
 
 def complement_sequence(seq):
     """
@@ -22,7 +22,6 @@ def complement_sequence(seq):
     >>> complement_sequence('ATGCAGT')
     'ACTGCAT'
     """
-    complement_nucleotides = {'G': 'C', 'C': 'G', 'A': 'T', 'T': 'A'}
     return ''.join(complement_nucleotides[nt] for nt in seq[::-1])
 
 
