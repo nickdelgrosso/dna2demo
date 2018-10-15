@@ -2,16 +2,9 @@ from dna import complement_sequence
 import pytest
 
 
-def test_complement_seq():
-    assert complement_sequence("GCA") == 'TGC'
-
-
-def test_complement_seq2():
-    assert complement_sequence("GGG") == 'CCC'
-
-
-def test_complement_seq3():
-    assert complement_sequence("ATGCAGT") == 'ACTGCAT'
+@pytest.mark.parametrize("seq,comp", [('TGC', 'GCA'), ('CCC', 'GGG'), ('ACTGCAT', 'ATGCAGT')])
+def test_complement_seq(seq, comp):
+    assert complement_sequence(seq) == comp
 
 
 def test_complement_upper():
