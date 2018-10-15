@@ -1,4 +1,5 @@
 from dna import complement_sequence
+import pytest
 
 
 def test_complement_seq():
@@ -15,3 +16,8 @@ def test_complement_seq3():
 
 def test_complement_upper():
     assert complement_sequence("atc") == 'GAT'
+
+
+def test_complement_invalid():
+    with pytest.raises(ValueError):
+        complement_sequence('GTB')

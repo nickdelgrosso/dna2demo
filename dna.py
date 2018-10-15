@@ -11,4 +11,7 @@ def complement_sequence(seq):
     Returns:
         -complement (str): the reverse complement of the sequence.
     """
-    return ''.join(complement_nucleotides[nt] for nt in seq[::-1].upper())
+    try:
+        return ''.join(complement_nucleotides[nt] for nt in seq[::-1].upper())
+    except KeyError:
+        raise ValueError("Invalid nucleotide in sequence")
